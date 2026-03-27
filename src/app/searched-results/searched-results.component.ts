@@ -20,9 +20,19 @@ export class SearchedResultsComponent {
   }
 
   getMovies(){
-   this.apiService.getMovie(this.textValue).subscribe((data: any) => {
-      this.searchedMovies = data.results;
+    // Validate input
+    if (!this.textValue || this.textValue.trim() === '') {
+      alert('Please enter a valid search term');
+      return;
+    }
+
+    this.apiService.getMovie(this.textValue.trim()).subscribe((data: any) => {
+      if (!data.results || data.results.length === 0) {
+        alert('No movies available for this specific request');
+        this.searchedMovies = [];
+      } else {
+        this.searchedMovies = data.results;
+      }
     });
   }
-
 }
