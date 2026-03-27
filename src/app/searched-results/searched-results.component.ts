@@ -1,14 +1,28 @@
-import { Component } from '@angular/core';
-
-//addb44ab35b45d3a9ccfcd1c384ad541
+import { Component, Input } from '@angular/core';
+import { APIService } from '../APIServices/APIServices.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-searched-results',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './searched-results.component.html',
   styleUrl: './searched-results.component.css'
 })
 export class SearchedResultsComponent {
+
+  searchedMovies: any = [];
+  @Input () textValue: string = '';
+  
+  constructor(private apiService: APIService) {
+    this.textValue = '';
+  }
+
+  getMovies(){
+   this.apiService.getMovie(this.textValue).subscribe((data: any) => {
+      this.searchedMovies = data.results;
+    });
+  }
 
 }
