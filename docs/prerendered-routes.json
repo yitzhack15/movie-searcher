@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/",
-    "/movie-genre",
-    "/movies-by-genre",
-    "/relevant-results",
-    "/searched-results"
-  ]
-}
