@@ -1,6 +1,16 @@
 <div>
     <h1 class="titles">Search Results</h1>
-</div>
-<div>
-    
+    <main>
+        <input type="text" class="placeholder" id="textValue" [(ngModel)] ="textValue" placeholder="Search for your favorite movie">
+        <button class="buttons" id="search"  (click) = 'getMovies()' >Search Movie</button>
+    </main>
+    <div class="movies-container">
+    <div *ngFor="let movie of searchedMovies" class="movie-card">
+        <img [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path" [alt]="movie.title" class="movie-poster">
+        <div class="card-content">
+            <h3>{{ movie.title }}</h3>
+            <p class="release-date">{{ movie.release_date }}</p>
+            <p class="rating">⭐ {{ movie.vote_average }}/10</p>
+        </div>
+    </div>
 </div>

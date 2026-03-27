@@ -26,4 +26,10 @@ export class APIService {
       `${this.apiUrl}${this.endpoints.popularMovies}?api_key=${this.apiKey}`
     );
   }
+
+  getMovie(value: string): Observable<any> {
+    return this.http.get<any>(
+      `${this.apiUrl}${this.endpoints.searchMovies}?api_key=${this.apiKey}&query=${value}`
+    );
+  }
 }
