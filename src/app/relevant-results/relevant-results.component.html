@@ -1,1 +1,11 @@
-<p>relevant-results works!</p>
+<h1 class="titles">Latest Popular Movies</h1>
+<div class="movies-container">
+    <div *ngFor="let movie of popularMovies" class="movie-card">
+        <img [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path" [alt]="movie.title" class="movie-poster">
+        <div class="card-content">
+            <h3>{{ movie.title }}</h3>
+            <p class="release-date">{{ movie.release_date }}</p>
+            <p class="rating">⭐ {{ movie.vote_average }}/10</p>
+        </div>
+    </div>
+</div>
