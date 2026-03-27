@@ -20,7 +20,6 @@ export class RelevantResultsComponent {
     this.apiService.getPopularMovies().subscribe(
       (response) => {
         this.popularMovies = response.results;
-        //console.log('Popular Movies:', response);
       },
       (error) => {
         console.error('Error fetching popular movies:', error);
