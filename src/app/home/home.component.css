@@ -30,16 +30,6 @@
       margin-left: 230px;
     }
 
-    main {
-      background: white;
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      width: 75%;
-      height: 75%;
-      margin-left: 210px;
-    }
-
     .placeholder {
       width: 100%;
       padding: 15px 20px;
