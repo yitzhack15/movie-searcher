@@ -39,4 +39,10 @@ export class APIService {
       `${this.apiUrl}${this.endpoints.genres}?api_key=${this.apiKey}`
     );
   }
+
+  getMovieByGenre(genreId: number): Observable<any> {
+    return this.http.get<any>(
+      `${this.apiUrl}discover/movie?api_key=${this.apiKey}&with_genres=${genreId}`
+    );
+  }
 }

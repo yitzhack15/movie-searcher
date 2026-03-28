@@ -1,7 +1,7 @@
 <h1 class="titles">Search By Movie Genres</h1>
 <div class="genre-container">
     <div class="genre-titles" *ngFor="let movieGenre of movieGenres">
-        <button class="genre-button">{{ movieGenre.name }}</button>
+        <button class="genre-button" (click)="getClickedGenre(movieGenre.id, movieGenre.name)">{{ movieGenre.name }}</button>
     </div>
 </div>
 

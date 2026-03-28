@@ -23,7 +23,7 @@ export const routes: Routes = [
         component: MovieGenreComponent
     }, 
     {
-        path: 'movies-by-genre',
+        path: 'movies-by-genre/:genreId',
         component: MoviesByGenreComponent
     }
 ];
