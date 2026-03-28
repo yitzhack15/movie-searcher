@@ -1,5 +1,4 @@
-
- *{
+*{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -30,34 +29,6 @@
       margin-bottom: 60px;
       margin-left: 230px;
     }
-
-    .genre-titles{
-      text-align: left;
-      color: white;
-      margin-bottom: 60px;
-      margin-left: 230px;
-      font-size: 22px;
-      
-    }
-
-    .genre-button{
-      background-color: transparent;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-   
-    .genre-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      width: 95%;
-      height: 65%;
-      margin-left: 1px;
-    }
-
 
     main {
       background: white;
