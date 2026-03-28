@@ -60,6 +60,20 @@
     padding: 10px 10px 10px 10px;
 }
 
+.genre-titles{
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+
+}
+
+.genre-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
 .movie-card:hover {
   transform: scale(1.05);
 }
