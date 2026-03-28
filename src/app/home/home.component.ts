@@ -14,5 +14,13 @@ import { MoviesByGenreComponent } from '../movies-by-genre/movies-by-genre.compo
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  
+  selectedGenreId: number | null = null;
+  selectedGenreName: string = '';
+  
+  onGenreSelected(genre: { id: number, name: string }) {
+  this.selectedGenreId = genre.id;
+  this.selectedGenreName = genre.name;
+}
 
 }

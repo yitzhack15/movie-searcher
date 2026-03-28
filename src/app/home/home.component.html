@@ -27,12 +27,11 @@
 
   <!--Here I will put the movie genres-->
   <div >
-    <app-movie-genre></app-movie-genre>
+    <app-movie-genre (genre)= "onGenreSelected($event)"></app-movie-genre>
   </div>
 
-  <!--Here I will put the movies by genre selected-->
-  <div >
-    <app-movies-by-genre></app-movies-by-genre>
+  <div>
+    <app-movies-by-genre [genre]="{ id: selectedGenreId, name: selectedGenreName }"></app-movies-by-genre>
   </div>
 </body>
 </html>
